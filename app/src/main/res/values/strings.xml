@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Facts Of Numbers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--Exceptions-->
+    <string name="check_connection">Please check your network connection</string>
+    <string name="error_connection">Error connection. Please try again later</string>
+    <string name="server_error">Server error. Please try again later</string>
+    <string name="connect_timed_out">Connect timed out. Please try again later</string>
+    <string name="software_caused_connection_abort">Software caused connection abort</string>
+    <string name="something_happened_while_connecting">Something happened while connecting</string>
+    <string name="enter_your_number">Enter your number</string>
+</resources>
