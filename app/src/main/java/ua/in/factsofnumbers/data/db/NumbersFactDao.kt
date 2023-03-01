@@ -14,4 +14,7 @@ interface NumbersFactDao {
 
     @Query("SELECT * FROM facts ORDER BY id DESC")
     fun getAllSavedFacts(): LiveData<List<NumbersFact>>
+
+    @Query("SELECT * FROM facts ORDER BY id DESC LIMIT :limit OFFSET :offset")
+    suspend fun getAllSavedFactsPaging(limit: Int, offset: Int): List<NumbersFact>
 }

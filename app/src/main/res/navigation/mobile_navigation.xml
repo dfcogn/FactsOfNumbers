@@ -16,6 +16,6 @@
     <fragment
         android:id="@+id/factFragment"
         android:name="ua.in.factsofnumbers.presentation.FactDescriptionFragment"
-        android:label="Fact Description"
+        android:label="@string/fact_description"
         tools:layout="@layout/fragment_fact_description" />
 </navigation>

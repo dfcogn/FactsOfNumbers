@@ -1,6 +1,5 @@
 package ua.`in`.factsofnumbers.presentation
 
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController

@@ -4,7 +4,6 @@ import android.app.Application
 import ua.`in`.factsofnumbers.BuildConfig
 
 class App: Application() {
-
     private lateinit var appComponent: AppComponent
 
     override fun onCreate() {

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Facts Of Numbers</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="get_fact">Get Fact</string>
+    <string name="get_fact_about_random_number">Get fact about random number</string>
+    <string name="fact_description">Fact Description</string>
 
     <!--Exceptions-->
     <string name="check_connection">Please check your network connection</string>
@@ -10,4 +12,5 @@
     <string name="software_caused_connection_abort">Software caused connection abort</string>
     <string name="something_happened_while_connecting">Something happened while connecting</string>
     <string name="enter_your_number">Enter your number</string>
+    <string name="failed_to_load_numbers_fact_history">Failed to load numbers fact history</string>
 </resources>

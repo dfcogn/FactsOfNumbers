@@ -12,7 +12,8 @@ import javax.inject.Singleton
     RepositoryModule::class,
     ViewModelFactoryModule::class,
     LocalDataSourceModule::class,
-    DatabaseModule::class
+    DatabaseModule::class,
+    UseCaseModule::class
 ])
 interface AppComponent {
     fun inject(homeFragment: HomeFragment)

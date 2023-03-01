@@ -2,6 +2,10 @@ package ua.`in`.factsofnumbers.data.repository
 
 import android.content.res.Resources
 import androidx.lifecycle.LiveData
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import kotlinx.coroutines.flow.Flow
 import ua.`in`.factsofnumbers.domain.model.NumbersFact
 import ua.`in`.factsofnumbers.data.repository.datasource.LocalDataSource
 import ua.`in`.factsofnumbers.data.repository.datasource.RemoteDataSource
@@ -41,7 +45,17 @@ class NumberRepositoryImpl(
         return localDataSource.getAllSavedFacts()
     }
 
+    override fun getAllNumbersFactPagingFromDb(): Flow<PagingData<NumbersFact>> {
+        return Pager(config = PagingConfig(pageSize = PAGE_SIZE, enablePlaceholders = false), pagingSourceFactory = {
+            NumbersFactPagingSource(localDataSource, resources)
+        }).flow
+    }
+
     override suspend fun saveNumbersFactToDb(numbersFact: NumbersFact) {
         localDataSource.saveFactToDb(numbersFact)
+    }
+
+    companion object{
+        const val PAGE_SIZE = 20
     }
 }

@@ -12,4 +12,8 @@ class RoomDataSource(private val numbersFactDao: NumbersFactDao): LocalDataSourc
     override fun getAllSavedFacts(): LiveData<List<NumbersFact>> {
         return numbersFactDao.getAllSavedFacts()
     }
+
+    override suspend fun getAllSavedFactsPaging(limit: Int, offset: Int): List<NumbersFact> {
+        return numbersFactDao.getAllSavedFactsPaging(limit, offset)
+    }
 }
